@@ -1,0 +1,70 @@
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    -webkit-tap-highlight-color: transparent; 
+    background-color: #f1f5f9;
+}
+.dark body {
+    background-color: #020617; /* Ultra dark modern background */
+}
+
+/* Modern Mesh Background for Login */
+.mesh-bg {
+    background-color: #f8fafc;
+    background-image: 
+        radial-gradient(at 40% 20%, hsla(220,100%,74%,0.3) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.3) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.3) 0px, transparent 50%);
+}
+.dark .mesh-bg {
+    background-color: #020617;
+    background-image: 
+        radial-gradient(at 40% 20%, hsla(220,100%,34%,0.2) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,26%,0.2) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(265,100%,23%,0.2) 0px, transparent 50%);
+}
+
+/* Premium Glassmorphism */
+.glass-panel { 
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255,255,255,0.8); 
+}
+.dark .glass-panel { 
+    background: rgba(30, 41, 59, 0.5); 
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+
+/* Premium Card */
+.premium-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    transform: skewX(-20deg);
+    animation: shine 8s infinite;
+}
+@keyframes shine { 
+    0% { left: -100%; } 
+    20% { left: 200%; } 
+    100% { left: 200%; } 
+}
+
+/* Hide Scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Sleek Animations */
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+.transition-spring { transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
